@@ -15,9 +15,11 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
 }))
-app.use('/', router)
+app.use('/bot', router)
 
 // * Start Server.
 app.listen(PORT, () => {
     console.log(`Server Started At http://127.0.0.1:${PORT} 🚀👩‍🚀`)
 })
+
+module.exports = app
