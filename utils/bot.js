@@ -9,7 +9,7 @@ async function bot (trigger, reply, text) {
             }
         }
     }
-    return response ? resonse : `${text} 😂🤣`
+    return response ? response : `${text} 😂🤣`
 }
 
 module.exports = bot
