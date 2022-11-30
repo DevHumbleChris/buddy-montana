@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
 }))
-app.use('/bot', router)
+app.use('/', router)
 
 // * Start Server.
 app.listen(PORT, () => {
