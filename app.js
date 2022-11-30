@@ -3,7 +3,7 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const bodyParser = require('body-parser')
-const { application } = require('express')
+const router = require('./routes')
 
 const  app = express()
 const PORT = process.env.PORT
@@ -15,6 +15,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
 }))
+app.use('/bot', router)
 
 // * Start Server.
 app.listen(PORT, () => {
